@@ -7,47 +7,96 @@
 			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
 			rel="stylesheet"
 		/>
+		<script>
+			// toggle menu
+			var menuIsOpen = false;
+
+			function toggleMenu() {
+				menuIsOpen = !menuIsOpen;
+				document
+					.getElementById('mobile-menu')
+					.classList[menuIsOpen ? 'add' : 'remove']('menu-show');
+				document.body.style.overflowY = menuIsOpen ? 'hidden' : 'scroll';
+			}
+
+			window.addEventListener('load', function () {
+				var menuButton = document.getElementById('main-nav__menu-button');
+				menuButton.addEventListener('click', toggleMenu);
+			});
+
+			// toggle #me transition
+			var scrollLiftIsOnTop = true;
+
+			window.addEventListener('scroll', function () {
+				if (scrollLiftIsOnTop !== window.pageYOffset <= 150) {
+					scrollLiftIsOnTop = window.pageYOffset <= 150;
+					document
+						.getElementById('me')
+						.classList[scrollLiftIsOnTop ? 'remove' : 'add'](
+							'me-transition-out'
+						);
+				}
+			});
+		</script>
 	</head>
 	<body>
+		<div id="mobile-menu" class="mobile-menu" onclick="toggleMenu()">
+			<a href="#about-anchor" class="nav-link">À PROPOS DE MOI</a>
+			<a href="#projects-anchor" class="nav-link">PROJETS PERSONNELS</a>
+			<a href="#technologies-anchor" class="nav-link">TECHNOLOGIES</a>
+			<a href="#contact-anchor" class="nav-link">CONTACT</a>
+		</div>
 		<header class="main-header">
 			<nav class="main-nav">
 				<div style="flex: 1">
-					<button id="main-nav__menu-button">menu</button>
+					<button id="main-nav__menu-button">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+						>
+							<path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
+						</svg>
+					</button>
 				</div>
 				<ul class="main-nav__items">
 					<li>
-						<a href="#about-anchor">About me</a>
+						<a href="#about-anchor" class="nav-link">À propos de moi</a>
 					</li>
 					<li>
-						<a href="#projects-anchor">Personal projects</a>
+						<a href="#projects-anchor" class="nav-link">Projets personnels</a>
 					</li>
 					<li>
-						<a href="#technologies-anchor">Technologies</a>
+						<a href="#technologies-anchor" class="nav-link">Technologies</a>
 					</li>
 					<li>
-						<a href="#contact-anchor">Contact</a>
+						<a href="#contact-anchor" class="nav-link">Contact</a>
 					</li>
 				</ul>
 			</nav>
 		</header>
 		<section id="cover">
-			<div id="me">
-				<div style="padding: 0.5rem">Hi, I'm<br />Jonathan Zappalà</div>
+			<div id="me" class="me me-transition">
+				<div style="padding: 0.5rem">
+					<span>Bonjour, moi c'est</span>
+					<br />Jonathan Zappalà
+				</div>
 				<div id="profile-picture"></div>
 			</div>
 		</section>
 		<main>
 			<section id="about">
 				<span id="about-anchor" class="anchor"></span>
-				<h1>About me</h1>
+				<h1>À propos de moi</h1>
 				<p>
-					I started programming at the age of 13 in javascript and Visual Basic.
-					What makes me most enthusiastic about development is collaborating
-					with a client to help him to achieve his goals while also thinking
-					about the best strategy to produce reliable solutions in an effective
-					way. I reach my full potential when working with Meteor, React (or
-					React Native) and MongoDB, deployed on a Unix-based production
-					environment.
+					Développeur freelance passionné et polyvalent, I started programming
+					at the age of 13 in javascript and Visual Basic. What makes me most
+					enthusiastic about development is collaborating with a client to help
+					him to achieve his goals while also thinking about the best strategy
+					to produce reliable solutions in an effective way. I reach my full
+					potential when working with Meteor, React (or React Native) and
+					MongoDB, deployed on a Unix-based production environment.
 				</p>
 			</section>
 			<section>
@@ -132,7 +181,7 @@
 					</li>
 					<li>
 						<span>C++</span>
-						<span>beginner/interm.</span>
+						<span>intermediate</span>
 					</li>
 					<li>
 						<span>Ubuntu server</span>

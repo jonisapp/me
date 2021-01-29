@@ -1,11 +1,12 @@
 .main-header {
 	top: 0;
 	position: fixed;
-	z-index: 10;
+	z-index: 2;
 	width: 100%;
-	background-color: white;
-	box-shadow: -2px 0px 10px 7px rgba(0, 255, 30, 0.25);
-	-moz-box-shadow: -2px 0px 10px 7px rgba(0, 255, 30, 0.25);
+	background-color: rgba(255, 255, 255, 0.8);
+	backdrop-filter: blur(3px);
+	box-shadow: -2px 0px 10px 4px rgba(0, 255, 30, 0.22);
+	-moz-box-shadow: -2px 0px 10px 4px rgba(0, 255, 30, 0.22);
 }
 
 .main-nav {
@@ -13,20 +14,32 @@
 	justify-content: space-between;
 	align-items: center;
 	height: 4rem;
-	padding: 0 2rem 0 2rem;
+	padding: 0 1rem 0 1rem;
 	max-width: $contentWidth;
 	margin: auto;
 
 	@media (min-width: 800px) {
-		height: 6rem;
+		height: 4rem;
 	}
 }
 
 #main-nav__menu-button {
 	display: block;
+	background: transparent;
+	border: none;
+	outline: none;
+	padding: 0;
 
 	@media (min-width: 800px) {
 		display: none;
+	}
+
+	svg {
+		fill: $green;
+
+		&:hover {
+			fill: $lightgreen;
+		}
 	}
 }
 
@@ -37,18 +50,5 @@
 
 	@media (min-width: 800px) {
 		display: flex;
-	}
-
-	a {
-		padding: 1rem;
-		font-size: 1.25rem;
-		text-decoration: none;
-		color: green;
-
-		&:hover,
-		&:active {
-			color: lightgreen;
-			border-bottom: 3px solid lightgreen;
-		}
 	}
 }
