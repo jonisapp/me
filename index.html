@@ -7,45 +7,25 @@
 			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
 			rel="stylesheet"
 		/>
-		<script>
-			// toggle menu
-			var menuIsOpen = false;
-
-			function toggleMenu() {
-				menuIsOpen = !menuIsOpen;
-				document
-					.getElementById('mobile-menu')
-					.classList[menuIsOpen ? 'add' : 'remove']('menu-show');
-				document.body.style.overflowY = menuIsOpen ? 'hidden' : 'scroll';
-			}
-
-			window.addEventListener('load', function () {
-				var menuButton = document.getElementById('main-nav__menu-button');
-				menuButton.addEventListener('click', toggleMenu);
-			});
-
-			// toggle #me transition
-			var scrollLiftIsOnTop = true;
-
-			window.addEventListener('scroll', function () {
-				if (scrollLiftIsOnTop !== window.pageYOffset <= 150) {
-					scrollLiftIsOnTop = window.pageYOffset <= 150;
-					document
-						.getElementById('me')
-						.classList[scrollLiftIsOnTop ? 'remove' : 'add'](
-							'me-transition-out'
-						);
-				}
-			});
-		</script>
+		<script src="./js/index.js"></script>
 	</head>
 	<body>
-		<div id="mobile-menu" class="mobile-menu" onclick="toggleMenu()">
-			<a href="#about-anchor" class="nav-link">À PROPOS DE MOI</a>
-			<a href="#projects-anchor" class="nav-link">PROJETS PERSONNELS</a>
-			<a href="#technologies-anchor" class="nav-link">TECHNOLOGIES</a>
-			<a href="#contact-anchor" class="nav-link">CONTACT</a>
-		</div>
+		<nav id="mobile-menu" class="mobile-menu" onclick="toggleMenu()">
+			<ul>
+				<li>
+					<a href="#about-anchor" class="nav-link">À PROPOS DE MOI</a>
+				</li>
+				<li>
+					<a href="#projects-anchor" class="nav-link">PROJETS PERSONNELS</a>
+				</li>
+				<li>
+					<a href="#technologies-anchor" class="nav-link">TECHNOLOGIES</a>
+				</li>
+				<li>
+					<a href="#contact-anchor" class="nav-link">CONTACT</a>
+				</li>
+			</ul>
+		</nav>
 		<header class="main-header">
 			<nav class="main-nav">
 				<div style="flex: 1">
@@ -76,7 +56,8 @@
 				</ul>
 			</nav>
 		</header>
-		<section id="cover">
+		<div id="cover__back"></div>
+		<section id="cover__front">
 			<div id="me" class="me me-transition">
 				<div style="padding: 0.5rem">
 					<span>Bonjour, moi c'est</span>

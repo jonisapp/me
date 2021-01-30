@@ -17,6 +17,11 @@ html {
 
 body {
 	margin: 0;
+}
+
+main {
+	padding: 1rem;
+	background: white;
 	background: radial-gradient(
 		circle,
 		rgba(255, 255, 255, 1) 50%,
@@ -24,14 +29,10 @@ body {
 	);
 }
 
-main {
-	margin: 0 auto 0 auto;
-	padding: 1rem;
-	max-width: $contentWidth;
-}
-
 section {
 	position: relative;
+	max-width: $contentWidth;
+	margin: 0 auto 0 auto;
 }
 
 section > span.anchor {
@@ -83,10 +84,15 @@ p {
 		opacity: 1;
 		transform: translateX(0);
 	}
+
+	a {
+		display: inline-block;
+	}
 }
 
 .nav-link {
-	padding: 1rem;
+	margin: 0.5rem;
+	padding: 0.5rem;
 	font-size: 1rem;
 	font-weight: 500;
 	text-decoration: none;
@@ -100,16 +106,30 @@ p {
 	}
 }
 
-#cover {
-	margin-top: 4rem;
-	display: flex;
+#cover__back {
+	position: fixed;
+	top: 4rem;
 	height: 50vh;
+	width: 100vw;
 	background: radial-gradient(
 			circle,
 			rgba(255, 255, 255, 0) 50%,
 			rgba(223, 255, 225, 0.6) 100%
 		),
-		url('../images/background.jpg') center/cover no-repeat border-box;
+		url('../images/background.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	z-index: -1;
+}
+
+#cover__front {
+	background: none;
+	margin-top: 4rem;
+	display: flex;
+	height: 50vh;
+
+	overflow: hidden;
 
 	@media (min-width: 800px) {
 		margin-top: 4rem;
