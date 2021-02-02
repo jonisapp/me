@@ -7,6 +7,7 @@
 			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
 			rel="stylesheet"
 		/>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 		<script src="./js/index.js"></script>
 	</head>
 	<body>
@@ -19,7 +20,7 @@
 					<a href="#projects-anchor" class="nav-link">PROJETS PERSONNELS</a>
 				</li>
 				<li>
-					<a href="#technologies-anchor" class="nav-link">TECHNOLOGIES</a>
+					<a href="#technologies-anchor" class="nav-link">COMPÉTENCES</a>
 				</li>
 				<li>
 					<a href="#contact-anchor" class="nav-link">CONTACT</a>
@@ -42,13 +43,13 @@
 				</div>
 				<ul class="main-nav__items">
 					<li>
-						<a href="#about-anchor" class="nav-link">À propos de moi</a>
+						<a href="#about-anchor" class="nav-link">Services</a>
 					</li>
 					<li>
 						<a href="#projects-anchor" class="nav-link">Projets personnels</a>
 					</li>
 					<li>
-						<a href="#technologies-anchor" class="nav-link">Technologies</a>
+						<a href="#technologies-anchor" class="nav-link">Compétences</a>
 					</li>
 					<li>
 						<a href="#contact-anchor" class="nav-link">Contact</a>
@@ -67,30 +68,83 @@
 			</div>
 		</section>
 		<main>
-			<section id="about">
+			<section id="services">
 				<span id="about-anchor" class="anchor"></span>
-				<h1>À propos de moi</h1>
+				<h1 data-aos="fade-up">Services</h1>
 				<p>
-					Développeur freelance passionné et polyvalent, I started programming
-					at the age of 13 in javascript and Visual Basic. What makes me most
-					enthusiastic about development is collaborating with a client to help
-					him to achieve his goals while also thinking about the best strategy
-					to produce reliable solutions in an effective way. I reach my full
-					potential when working with Meteor, React (or React Native) and
-					MongoDB, deployed on a Unix-based production environment.
+					Développeur passionné et polyvalent, mon travail consiste à
+					concrétiser vos meilleures idées. Qu’il s’agisse de votre site web,
+					plate-forme collaborative, application de gestion pour votre
+					entreprise ou site d'e-commerce, je suis à votre disposition pour
+					contribuer à atteindre vos objectifs les plus exigeants.
+				</p>
+				<ul>
+					<li data-aos="fade-up">
+						<img src="./images/checked.svg" />
+						<span>Intégration web (HTML, CSS/Sass, Javascript)</span>
+					</li>
+					<li data-aos="fade-up">
+						<img src="./images/checked.svg" />
+						<span>
+							Création de <span class="strong">sites internet</span>
+							(React, HTML, CSS/Sass, Javascript, ...)
+						</span>
+					</li>
+					<li data-aos="fade-up">
+						<img src="./images/checked.svg" />
+						<span>
+							Développement d'<span class="strong">applications web</span> (avec
+							back-end Node.js ou serverless)
+						</span>
+					</li>
+					<li data-aos="fade-up">
+						<img src="./images/checked.svg" />
+						<span>
+							Développement d'<span class="strong">applications mobiles</span>
+							(React Native, avec back-end Node.js ou serverless)
+						</span>
+					</li>
+				</ul>
+				<dl data-aos="flip-up">
+					<dt>Développeur full-stack ?</dt>
+					<dd>
+						Le développeur full-stack travaille côté-client et coté-serveur.
+						Cela signifie qu'il peut se substituer à la fois aux rôles de
+						front-end et back-end. Le choix d'un full-stack représente donc un
+						réel atout pour les petits budgets en ce qu'il confère l'avantage de
+						n'avoir à faire appel qu'à un seul développeur pour mener à bien un
+						projet de A à Z.
+					</dd>
+				</dl>
+				<p data-aos="fade-up">
+					Vous l'aurez compris, le terme de full-stack s'utilisera facilement à
+					des fins de marketing. Personnellement j'aime bien me considérer comme
+					une sorte de généraliste, car il va de soi qu'à années d'expérience
+					égales, un full-stack ne surpassera que rarement un développeur
+					spécialisé dans sa discipline. Ainsi, dans le cas où votre projet
+					serait trop conséquent, il sera préférable de faire appel à une
+					entreprise plutôt que d'engager vous-même un ou plusieurs
+					développeurs, quelque soit leurs spécialités.
+				</p>
+				<h2 data-aos="fade-up">Ce que vous pouvez attendre de moi</h2>
+				<p data-aos="fade-up">
+					Premièrement, même si cela devrait être le cas de n'importe quel
+					prestataire, je m'engage à vous accorder toute mon attention, qu'il
+					s'agisse de vous, de vos projets ou de vos idées. Il s'agit à mon avis
+					du premier pré-requis à avoir pour pouvoir colaborer.
 				</p>
 			</section>
 			<section>
 				<span id="projects-anchor" class="anchor"></span>
-				<h1 id="projects">Personal Projects</h1>
+				<h1 id="projects" data-aos="fade-up">Personal Projects</h1>
 				<ul class="project-items">
-					<li>
+					<li data-aos="fade-up">
 						<a href="https://www.covid19-graph.ch/" target="_blank"
 							>covid19-graph.ch</a
 						>
 						a web app to analyse and compare covid-19 stats
 					</li>
-					<li>
+					<li data-aos="fade-up">
 						<a
 							href="https://www.npmjs.com/package/react-custom-slider"
 							target="_blank"
@@ -102,79 +156,83 @@
 			</section>
 			<section id="technologies">
 				<span id="technologies-anchor" class="anchor"></span>
-				<h1>Technologies</h1>
+				<h1 data-aos="fade-up">Compétences</h1>
 				<ul id="technologies__items">
 					<li>
 						<span>HTML</span>
-						<span>advanced</span>
+						<span>★★★★</span>
 					</li>
 					<li>
 						<span>Javascript</span>
-						<span>interm./advanced</span>
+						<span>★★★☆</span>
 					</li>
 					<li>
 						<span>CSS/Sass</span>
-						<span>intermediate</span>
+						<span>★★★☆</span>
 					</li>
 					<li>
 						<span>Meteor</span>
-						<span>advanced</span>
+						<span>★★★★</span>
 					</li>
 					<li>
 						<span>React</span>
-						<span>advanced</span>
+						<span>★★★★</span>
 					</li>
 					<li>
 						<span>React Native</span>
-						<span>intermediate</span>
+						<span>★★★☆</span>
 					</li>
 					<li>
 						<span>Redux</span>
-						<span>intermediate</span>
+						<span>★★★☆</span>
 					</li>
 					<li>
 						<span>Vue.js</span>
-						<span>beginner</span>
+						<span>★☆☆☆</span>
 					</li>
 					<li>
 						<span>Node.js</span>
-						<span>intermediate</span>
+						<span>★★☆☆</span>
 					</li>
 					<li>
 						<span>MongoDB</span>
-						<span>advanced</span>
+						<span>★★★★</span>
 					</li>
 					<li>
 						<span>MySQL</span>
-						<span>intermediate</span>
+						<span>★★☆☆</span>
 					</li>
 					<li>
 						<span>Firebase</span>
-						<span>intermediate</span>
+						<span>★★☆☆</span>
 					</li>
 					<li>
 						<span>Amazon AWS</span>
-						<span>intermediate</span>
+						<span>★★☆☆</span>
 					</li>
 					<li>
 						<span>Apollo</span>
-						<span>beginner</span>
+						<span>★☆☆☆</span>
 					</li>
 					<li>
 						<span>C++</span>
-						<span>intermediate</span>
+						<span>★★☆☆</span>
 					</li>
 					<li>
-						<span>Ubuntu server</span>
-						<span>intermediate</span>
+						<span>Linux server</span>
+						<span>★★★☆</span>
 					</li>
 				</ul>
 			</section>
 			<section id="contact">
 				<span id="contact-anchor" class="anchor"></span>
-				<h1>Contact</h1>
-				<p>+41 79 963 81 35</p>
+				<h1 data-aos="fade-up">Contact</h1>
+				<p data-aos="fade-up">+41 79 963 81 35</p>
 			</section>
 		</main>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
 	</body>
 </html>

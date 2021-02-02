@@ -1,0 +1,42 @@
+.mobile-menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	z-index: 3;
+	left: 0;
+	top: 4rem;
+	bottom: 0;
+	width: 100vw;
+	background-color: rgba(255, 255, 255, 0.8);
+	opacity: 0;
+	transform: translateX(-100vw);
+	backdrop-filter: blur(3px);
+	transition: opacity 0.3s ease, transform 0.3s ease;
+
+	&.menu-show {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	a {
+		display: inline-block;
+	}
+}
+
+.nav-link {
+	margin: 0.5rem;
+	padding: 0.5rem;
+	font-size: 1rem;
+	font-weight: 500;
+	text-decoration: none;
+	color: $green;
+
+	&:hover,
+	&:active {
+		transition: color 0.25s ease-out;
+		color: $lightgreen;
+		border-bottom: 3px solid $lightgreen;
+	}
+}

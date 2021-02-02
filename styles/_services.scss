@@ -1,0 +1,20 @@
+#services {
+	ul > li {
+		padding: 1rem 0 1rem 0;
+		display: flex;
+		align-items: center;
+		font-weight: 400;
+
+		img {
+			height: 2rem;
+			width: 2rem;
+			margin-right: 1rem;
+		}
+
+		span.strong {
+			color: $green;
+			font-weight: 500;
+			font-style: italic;
+		}
+	}
+}
