@@ -1,19 +1,16 @@
 const data = {
 	slideshows_urls: {
 		notacloud: [
-			'../images/notacloud/notacloudDashboard.png',
-			'../images/notacloud/notacloud_operations.png',
-			'../images/notacloud/notacloudAccountingAccounts.png',
+			'images/notacloud/notacloudDashboard.png',
+			'images/notacloud/notacloud_operations.png',
+			'images/notacloud/notacloudAccountingAccounts.png',
 		],
 		cinetwork: [
-			'../images/cinetwork/movie_details.png',
-			'../images/cinetwork/movies.png',
-			'../images/cinetwork/movie.png',
+			'images/cinetwork/movie_details.png',
+			'images/cinetwork/movies.png',
+			'images/cinetwork/movie.png',
 		],
-		planner: [
-			'../images/planner/planner.png',
-			'../images/planner/interface.png',
-		],
+		planner: ['images/planner/planner.png', 'images/planner/interface.png'],
 	},
 };
 
