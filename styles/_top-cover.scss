@@ -55,6 +55,10 @@
 		font-size: 3.5rem;
 	}
 
+	#welcome_message {
+		margin: 10px;
+	}
+
 	span {
 		font-size: 2rem;
 
@@ -66,12 +70,13 @@
 	#profile-picture {
 		height: 150px;
 		width: 150px;
+		margin: 10px;
 		border-radius: 50%;
 		background: url('../images/profile.jpg') center/cover no-repeat border-box;
 
 		@media (min-width: 800px) {
-			height: 250px;
-			width: 250px;
+			height: 200px;
+			width: 200px;
 		}
 	}
 }
