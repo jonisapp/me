@@ -120,6 +120,7 @@
   font-weight: 500;
   text-decoration: none;
   color: #009e12;
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .nav-link:hover, .nav-link:active {
@@ -275,7 +276,9 @@ body {
 
 main {
   padding: 1rem;
-  background: radial-gradient(circle, white 50%, honeydew 100%);
+  background: #f3ffec;
+  background: -webkit-gradient(linear, left top, right top, from(#f3ffec), color-stop(25%, white), color-stop(75%, white), to(#f3ffec));
+  background: linear-gradient(90deg, #f3ffec 0%, white 25%, white 75%, #f3ffec 100%);
 }
 
 section {
@@ -438,8 +441,8 @@ dl dd {
   transition: -webkit-filter 0.25s linear;
   transition: filter 0.25s linear;
   transition: filter 0.25s linear, -webkit-filter 0.25s linear;
-  -webkit-filter: blur(7px);
-          filter: blur(7px);
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
 }
 
 @media (min-width: 800px) {

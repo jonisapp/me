@@ -28,10 +28,13 @@ body {
 
 main {
 	padding: 1rem;
-	background: radial-gradient(
-		circle,
-		rgba(255, 255, 255, 1) 50%,
-		rgba(240, 255, 240, 1) 100%
+	background: rgb(243, 255, 236);
+	background: linear-gradient(
+		90deg,
+		rgba(243, 255, 236, 1) 0%,
+		rgba(255, 255, 255, 1) 25%,
+		rgba(255, 255, 255, 1) 75%,
+		rgba(243, 255, 236, 1) 100%
 	);
 }
 
@@ -169,7 +172,7 @@ dl {
 			background-position: 50%;
 			background-repeat: no-repeat;
 			transition: filter 0.25s linear;
-			filter: blur(7px);
+			filter: blur(5px);
 
 			@media (min-width: 800px) {
 				height: 350px;
