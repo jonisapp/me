@@ -1,8 +1,27 @@
 $contentWidth: 1110px;
-$green: #009e12;
-$green2: rgba(0, 158, 18, 0.7);
-$green3: #adeab3;
-$lightgreen: #1bd321;
+$block-margin: 3rem;
+$block-padding: 2rem;
+$primary: #48a851;
+$primary-variant-accent: #009e12;
+$primary-variant-light: #adeab3;
+$primary-hover: #1bd321;
+
+@mixin block-margins {
+	margin: $block-margin 0 $block-margin 0;
+}
+
+@mixin primary-gradient {
+	background: #f7fff8;
+	background: radial-gradient(
+		circle,
+		rgba(255, 255, 255, 1) 60%,
+		rgba(235, 255, 237, 1) 100%
+	);
+}
+
+@mixin box-shadow-default {
+	box-shadow: 3px 3px 15px 5px rgba(0, 0, 0, 0.1);
+}
 
 @import './header';
 @import './navigation';
@@ -22,12 +41,16 @@ html {
 
 body {
 	margin: 0;
-	font-size: 1.25rem;
+	font-size: 1rem;
 	font-weight: 300;
+
+	@media (min-width: 800px) {
+		font-size: 1.25rem;
+	}
 }
 
 main {
-	padding: 1rem;
+	overflow: hidden;
 	background: rgb(243, 255, 236);
 	background: linear-gradient(
 		90deg,
@@ -41,52 +64,66 @@ main {
 section {
 	position: relative;
 	max-width: $contentWidth;
-	margin: 0 auto 0 auto;
-}
+	margin: 0 1rem 0 1rem;
 
-section > span.anchor {
-	position: absolute;
-	top: -4rem;
-}
-@media (min-width: 800px) {
-	section > span.anchor {
-		top: -6rem;
+	@media (min-width: 1110px) {
+		margin: 0 auto 0 auto;
+	}
+
+	& > span.anchor {
+		position: absolute;
+		top: -4rem;
+
+		@media (min-width: 800px) {
+			top: -6rem;
+		}
 	}
 }
 
+#technologies {
+	width: 100vw;
+	max-width: 100vw;
+	background: $primary;
+}
+
 ul {
-	margin: 0;
+	@include block-margins;
 	padding: 0;
 	list-style: none;
 }
 
 h1 {
-	margin: 5rem 0 3rem 0;
+	margin: 5rem 0 $block-margin 0;
 	font-weight: 200;
-	font-size: 2.5rem;
+	font-size: 2rem;
+
+	@media (min-width: 800px) {
+		font-size: 2.5rem;
+	}
 }
 
 h2 {
-	margin-top: 5rem;
-	font-size: 1.7rem;
-	font-weight: 300;
+	margin-top: 4rem;
+	font-size: 2rem;
+	font-weight: 200;
 }
 
 p {
-	font-size: 1.25rem;
+	@include block-margins;
 	line-height: 2;
 	font-weight: 300;
 }
 
 dl {
-	margin: 3rem 0 3rem 0;
-	padding: 2rem;
+	@include block-margins;
+	@include box-shadow-default;
+	padding: $block-padding;
 	border-radius: 5px;
 	color: white;
-	background-color: $green2;
+	background-color: $primary;
 
 	dt {
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 		font-weight: 400;
 		margin-bottom: 1rem;
 	}
@@ -108,34 +145,14 @@ dl {
 	}
 }
 
-#technologies__items {
-	color: rgba(0, 0, 0, 0.75);
-	font-size: 1.25rem;
-
-	@media (min-width: 800px) {
-		column-count: 2;
-		column-gap: 10rem;
-	}
-
-	li {
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		padding: 1rem 0 1rem 0;
-
-		span:last-child {
-			font-style: normal;
-			color: $green;
-		}
-	}
-}
-
 .card {
-	margin: 3rem 0 3rem 0;
+	@include block-margins;
+	@include box-shadow-default;
+	border-radius: 5px;
 
 	.card-header {
 		padding: 1rem;
-		background-color: $green2;
+		background-color: $primary;
 		border-radius: 5px 5px 0 0;
 		font-size: 1.5rem;
 		font-weight: 500;
@@ -146,33 +163,28 @@ dl {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		border: 1px solid $green3;
+		border: 1px solid $primary-variant-light;
 		border-top-width: 0;
 		border-radius: 0 0 5px 5px;
 		background-color: #f2fff3;
-		background: rgb(255, 255, 255);
-		background: radial-gradient(
-			circle,
-			rgba(255, 255, 255, 1) 60%,
-			rgba(235, 255, 237, 1) 100%
-		);
+		@include primary-gradient;
 
 		@media (min-width: 800px) {
 			flex-direction: row;
 		}
 
 		.card-body__description {
-			margin: 30px;
+			margin: $block-padding;
 			line-height: 2;
 		}
 
 		.card-body__image {
-			margin: 30px;
+			margin: $block-padding;
 			background-size: contain;
 			background-position: 50%;
 			background-repeat: no-repeat;
 			transition: filter 0.25s linear;
-			filter: blur(5px);
+			filter: blur(3px);
 
 			@media (min-width: 800px) {
 				height: 350px;
@@ -181,6 +193,34 @@ dl {
 			&.animate {
 				filter: blur(0px);
 			}
+		}
+	}
+}
+
+#technologies__items {
+	margin: $block-margin auto $block-margin auto;
+	padding: $block-padding 0 $block-padding 0;
+	width: $contentWidth;
+	color: white;
+	font-size: 1rem;
+	font-weight: 400;
+
+	@media (min-width: 800px) {
+		column-count: 2;
+		column-gap: 10rem;
+	}
+
+	li {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem 0 1rem 0;
+
+		span:last-child {
+			font-size: 1.5rem;
+			font-style: normal;
+			color: #ffc535;
 		}
 	}
 }

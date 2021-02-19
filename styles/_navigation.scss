@@ -31,13 +31,13 @@
 	font-size: 1rem;
 	font-weight: 500;
 	text-decoration: none;
-	color: $green;
+	color: $primary-variant-accent;
 	background-color: rgba(255, 255, 255, 0.15);
 
 	&:hover,
 	&:active {
 		transition: color 0.25s ease-out;
-		color: $lightgreen;
-		border-bottom: 3px solid $lightgreen;
+		color: $primary-hover;
+		border-bottom: 3px solid $primary-hover;
 	}
 }

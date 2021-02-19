@@ -55,7 +55,11 @@ _.winEvent('scroll', function () {
 	}
 });
 
-function slideshowsInit(slideshowName_strArr, duration, randomInterval_int) {
+function slideshowsInit(
+	slideshowName_strArr,
+	duration_int,
+	randomInterval_int
+) {
 	slideshowName_strArr.forEach(function (slideshowName_str) {
 		_.get(
 			`slideshow_${slideshowName_str}`
@@ -76,7 +80,7 @@ function slideshowsInit(slideshowName_strArr, duration, randomInterval_int) {
 					]
 				}")`;
 			}, 250);
-		}, duration + Math.floor(Math.random() * randomInterval_int));
+		}, duration_int + Math.floor(Math.random() * randomInterval_int));
 	});
 }
 

@@ -35,10 +35,10 @@
 	}
 
 	svg {
-		fill: $green;
+		fill: $primary;
 
 		&:hover {
-			fill: $lightgreen;
+			fill: $primary-hover;
 		}
 	}
 }
