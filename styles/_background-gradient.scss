@@ -1,0 +1,51 @@
+@mixin textured-background-gradient($color1, $color2, $texture-url) {
+	background: linear-gradient(
+			90deg,
+			$color2 0%,
+			$color1 10%,
+			$color1 90%,
+			$color2 100%
+		),
+		url($texture-url), $color1;
+
+	@media (min-width: 600px) {
+		background: linear-gradient(
+				90deg,
+				$color2 0%,
+				$color1 5%,
+				$color1 95%,
+				$color2 100%
+			),
+			url($texture-url), $color1;
+	}
+	@media (min-width: 1400px) {
+		background: linear-gradient(
+				90deg,
+				$color2 0%,
+				$color1 10%,
+				$color1 90%,
+				$color2 100%
+			),
+			url($texture-url), $color1;
+	}
+	@media (min-width: 1550px) {
+		background: linear-gradient(
+				90deg,
+				$color2 0%,
+				$color1 20%,
+				$color1 80%,
+				$color2 100%
+			),
+			url($texture-url), $color1;
+	}
+	@media (min-width: 1800px) {
+		background: linear-gradient(
+				90deg,
+				$color2 0%,
+				$color1 25%,
+				$color1 75%,
+				$color2 100%
+			),
+			url($texture-url), $color1;
+	}
+}
