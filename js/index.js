@@ -42,7 +42,7 @@ function toggleMenu() {
 	document.body.style.overflowY = state.menuIsOpen ? 'hidden' : 'scroll';
 }
 
-// toggle #me transition
+// toggle avatar transition
 _.winEvent('scroll', function () {
 	const me_elm = _.get('me');
 	const triggerHeight = me_elm.offsetHeight / 4;

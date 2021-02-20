@@ -33,6 +33,11 @@
 	text-decoration: none;
 	color: $primary-variant-accent;
 	background-color: rgba(255, 255, 255, 0.15);
+	background: radial-gradient(
+		circle,
+		rgba(255, 255, 255, 0.15) 60%,
+		rgba(255, 255, 255, 0) 100%
+	);
 
 	&:hover,
 	&:active {
