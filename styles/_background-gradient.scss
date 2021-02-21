@@ -6,18 +6,8 @@
 			$color1 90%,
 			$color2 100%
 		),
-		url($texture-url), $color1;
+		$color1;
 
-	@media (min-width: 600px) {
-		background: linear-gradient(
-				90deg,
-				$color2 0%,
-				$color1 5%,
-				$color1 95%,
-				$color2 100%
-			),
-			url($texture-url), $color1;
-	}
 	@media (min-width: 1400px) {
 		background: linear-gradient(
 				90deg,

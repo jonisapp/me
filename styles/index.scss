@@ -1,5 +1,6 @@
 $contentWidth: 1110px;
 $block-margin: 3rem;
+$block-margin-mobile: 1.5rem;
 $block-padding: 2rem;
 $primary: #48a851;
 $primary-variant-accent: #007a0c;
@@ -31,6 +32,7 @@ $responsive-trigger-width: 1110px + 100px;
 @import './top-cover';
 @import './services';
 @import './background-gradient';
+@import './technologies';
 
 * {
 	box-sizing: border-box;
@@ -65,7 +67,7 @@ main {
 
 section {
 	position: relative;
-	margin: 0 $block-margin 0 $block-margin;
+	margin: 0 $block-margin-mobile 0 $block-margin-mobile;
 
 	@media (min-width: 1110px) {
 		margin: 0 auto 0 auto;
@@ -86,16 +88,6 @@ footer {
 	padding: $block-padding;
 	border-top: 1px solid $primary-variant-light;
 	background-color: $primary-variant-lighter;
-}
-
-#technologies {
-	margin: 0;
-	width: 100vw;
-	@include textured-background-gradient(
-		rgba(72, 168, 81, 1),
-		rgba(210, 255, 210, 0.5),
-		'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuX3JrZjEiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHdpZHRoPSIxMC41IiBoZWlnaHQ9IjEwLjUiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxsaW5lIHgxPSIwIiB5PSIwIiB4Mj0iMCIgeTI9IjEwLjUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz4gPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuX3JrZjEpIiBvcGFjaXR5PSIxIi8+PC9zdmc+'
-	);
 }
 
 ul {
@@ -205,39 +197,6 @@ dl {
 			&.animate {
 				filter: blur(0px);
 			}
-		}
-	}
-}
-
-#technologies__items {
-	margin: $block-margin 0 $block-margin 0;
-	padding: $block-padding $block-margin $block-padding $block-margin;
-	width: 100vw;
-	color: white;
-	font-size: 1rem;
-	font-weight: 400;
-
-	@media (min-width: 1110px) {
-		margin: $block-margin auto $block-margin auto;
-		padding: $block-padding 0 $block-padding 0;
-		width: $contentWidth;
-	}
-	@media (min-width: 800px) {
-		column-count: 2;
-		column-gap: 10rem;
-	}
-
-	li {
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 1rem 0 1rem 0;
-
-		span:last-child {
-			font-size: 1.5rem;
-			font-style: normal;
-			color: #ffc535;
 		}
 	}
 }
