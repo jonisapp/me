@@ -10,7 +10,7 @@ const data = {
 			'images/cinetwork/movies.png',
 			'images/cinetwork/movie.png',
 		],
-		planner: ['images/planner/planner.png', 'images/planner/interface.png'],
+		planner: ['images/planner/planner.png', 'images/planner/zoom.gif'],
 	},
 };
 
