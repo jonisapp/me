@@ -61,9 +61,9 @@ function slideshowsInit(
 	randomInterval_int
 ) {
 	slideshowName_strArr.forEach(function (slideshowName_str) {
-		_.get(
-			`slideshow_${slideshowName_str}`
-		).style.backgroundImage = `url("${data.slideshows_urls[slideshowName_str][0]}")`;
+		const slideshow = _.get(`slideshow_${slideshowName_str}`);
+
+		slideshow.style.backgroundImage = `url("${data.slideshows_urls[slideshowName_str][0]}")`;
 
 		setInterval(function () {
 			state.slideshows_indexes[slideshowName_str] =

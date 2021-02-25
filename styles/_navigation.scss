@@ -31,7 +31,7 @@
 	font-size: 1rem;
 	font-weight: 500;
 	text-decoration: none;
-	color: $primary-variant-accent;
+	color: $primary-variant-dark;
 	background-color: rgba(255, 255, 255, 0.15);
 	background: radial-gradient(
 		circle,
@@ -44,5 +44,6 @@
 		transition: color 0.25s ease-out;
 		color: $primary-hover;
 		border-bottom: 3px solid $primary-hover;
+		text-decoration: none;
 	}
 }

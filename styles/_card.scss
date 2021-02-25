@@ -1,0 +1,83 @@
+.card {
+	@include block-margins;
+	@include box-shadow-default;
+	border-radius: 5px;
+
+	.card-header {
+		padding: 1rem;
+		background-color: $primary;
+		border-radius: 5px 5px 0 0;
+		font-size: 1.5rem;
+		font-weight: 500;
+		color: white;
+	}
+
+	.card-body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: $block-padding;
+		border: 1px solid $primary-variant-light;
+		border-top-width: 0;
+		border-radius: 0 0 5px 5px;
+		background-color: #f2fff3;
+		@include primary-gradient;
+
+		& > .card-body__image {
+			margin: $block-padding 0 0 0;
+		}
+
+		@media (min-width: $content-width) {
+			flex-direction: row;
+
+			& > .card-body__image {
+				margin: 0 0 0 $block-padding;
+			}
+		}
+
+		&.inverted {
+			@media (min-width: $content-width) {
+				flex-direction: row-reverse;
+
+				& > .card-body__image {
+					margin: 0 $block-padding 0 0;
+				}
+			}
+		}
+
+		.card-body__description {
+			flex: 2;
+			line-height: 2;
+		}
+
+		.card-body__image {
+			position: relative;
+			background-repeat: no-repeat;
+			transition: filter 0.25s linear;
+			filter: blur(3px);
+			width: 100%;
+			max-height: 400px;
+
+			&.portrait {
+				background-size: auto 100%;
+				background-position: 50%;
+
+				@media (min-width: $content-width) {
+					flex: 1;
+				}
+			}
+			&.landscape {
+				background-size: contain;
+				background-position: 50%;
+
+				@media (min-width: $content-width) {
+					flex: 4;
+				}
+			}
+
+			&.animate {
+				filter: blur(0px);
+			}
+		}
+	}
+}
