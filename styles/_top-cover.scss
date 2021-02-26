@@ -37,7 +37,6 @@
 	justify-content: space-around;
 	align-items: center;
 	padding: 0.5rem;
-	font-size: 2.5rem;
 	font-weight: 300;
 	color: rgba(255, 255, 255, 0.8);
 	font-style: italic;
@@ -52,18 +51,25 @@
 
 	@media (min-width: 800px) {
 		flex-direction: row;
-		font-size: 3.5rem;
 	}
 
-	#welcome_message {
-		margin: 10px;
-	}
-
-	span {
-		font-size: 2rem;
+	#me__name {
+		display: inline-block;
+		font-size: 2.5rem;
+		animation: me__name__animation 0.75s ease-in;
 
 		@media (min-width: 800px) {
-			font-size: 2.5rem;
+			font-size: 3.5rem;
+		}
+	}
+
+	#me__description {
+		display: inline-block;
+		font-size: 1.75rem;
+		animation: me__description__animation 0.75s ease-in;
+
+		@media (min-width: 800px) {
+			font-size: 2.25rem;
 		}
 	}
 
@@ -73,10 +79,44 @@
 		margin: 10px;
 		border-radius: 50%;
 		background: url('../images/profile.jpg') center/cover no-repeat border-box;
+		animation: me__profile-picture 0.75s ease-in;
 
 		@media (min-width: 800px) {
 			height: 200px;
 			width: 200px;
 		}
+	}
+}
+
+@keyframes me__profile-picture {
+	from {
+		transform: scale(0.5);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes me__name__animation {
+	from {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes me__description__animation {
+	from {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
 	}
 }

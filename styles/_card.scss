@@ -17,11 +17,11 @@
 		flex-direction: column;
 		align-items: center;
 		padding: $block-padding;
-		border: 1px solid $primary-variant-light;
+		border: 1px solid $primary-light;
 		border-top-width: 0;
 		border-radius: 0 0 5px 5px;
 		background-color: #f2fff3;
-		@include primary-gradient;
+		@include primary-gradient-lighter;
 
 		& > .card-body__image {
 			margin: $block-padding 0 0 0;
