@@ -56,7 +56,7 @@
 	#me__name {
 		display: inline-block;
 		font-size: 2.5rem;
-		animation: me__name__animation 0.75s ease-in;
+		animation: me__name__animation 0.75s ease;
 
 		@media (min-width: 800px) {
 			font-size: 3.5rem;
@@ -66,7 +66,7 @@
 	#me__description {
 		display: inline-block;
 		font-size: 1.75rem;
-		animation: me__description__animation 0.75s ease-in;
+		animation: me__description__animation 0.75s ease;
 
 		@media (min-width: 800px) {
 			font-size: 2.25rem;
@@ -79,7 +79,7 @@
 		margin: 10px;
 		border-radius: 50%;
 		background: url('../images/profile.jpg') center/cover no-repeat border-box;
-		animation: me__profile-picture 0.75s ease-in;
+		animation: me__profile-picture 0.75s ease;
 
 		@media (min-width: 800px) {
 			height: 200px;

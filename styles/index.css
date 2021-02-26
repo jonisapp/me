@@ -212,8 +212,8 @@
 .me #me__name {
   display: inline-block;
   font-size: 2.5rem;
-  -webkit-animation: me__name__animation 0.75s ease-in;
-          animation: me__name__animation 0.75s ease-in;
+  -webkit-animation: me__name__animation 0.75s ease;
+          animation: me__name__animation 0.75s ease;
 }
 
 @media (min-width: 800px) {
@@ -225,8 +225,8 @@
 .me #me__description {
   display: inline-block;
   font-size: 1.75rem;
-  -webkit-animation: me__description__animation 0.75s ease-in;
-          animation: me__description__animation 0.75s ease-in;
+  -webkit-animation: me__description__animation 0.75s ease;
+          animation: me__description__animation 0.75s ease;
 }
 
 @media (min-width: 800px) {
@@ -241,8 +241,8 @@
   margin: 10px;
   border-radius: 50%;
   background: url("../images/profile.jpg") center/cover no-repeat border-box;
-  -webkit-animation: me__profile-picture 0.75s ease-in;
-          animation: me__profile-picture 0.75s ease-in;
+  -webkit-animation: me__profile-picture 0.75s ease;
+          animation: me__profile-picture 0.75s ease;
 }
 
 @media (min-width: 800px) {
