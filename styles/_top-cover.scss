@@ -54,9 +54,15 @@
 	}
 
 	#me__name {
-		display: inline-block;
-		font-size: 2.5rem;
-		animation: me__name__animation 0.75s ease;
+		display: block;
+		font-size: 2rem;
+		transform: translateX(-100%);
+		opacity: 0;
+		animation: me__name__animation 1s ease 0.5s 1 forwards;
+
+		@media (min-width: 400px) {
+			font-size: 2.5rem;
+		}
 
 		@media (min-width: 800px) {
 			font-size: 3.5rem;
@@ -64,9 +70,15 @@
 	}
 
 	#me__description {
-		display: inline-block;
-		font-size: 1.75rem;
-		animation: me__description__animation 0.75s ease;
+		display: block;
+		font-size: 1.5rem;
+		transform: translateX(100%);
+		opacity: 0;
+		animation: me__description__animation 1s ease 0.5s 1 forwards;
+
+		@media (min-width: 400px) {
+			font-size: 1.75rem;
+		}
 
 		@media (min-width: 800px) {
 			font-size: 2.25rem;
@@ -79,7 +91,9 @@
 		margin: 10px;
 		border-radius: 50%;
 		background: url('../images/profile.jpg') center/cover no-repeat border-box;
-		animation: me__profile-picture 0.75s ease;
+		transform: scale(0.5);
+		opacity: 0;
+		animation: me__profile-picture 0.5s ease 0.5s 1 forwards;
 
 		@media (min-width: 800px) {
 			height: 200px;
@@ -89,10 +103,6 @@
 }
 
 @keyframes me__profile-picture {
-	from {
-		transform: scale(0.5);
-		opacity: 0;
-	}
 	to {
 		transform: scale(1);
 		opacity: 1;
@@ -100,10 +110,6 @@
 }
 
 @keyframes me__name__animation {
-	from {
-		transform: translateX(-100%);
-		opacity: 0;
-	}
 	to {
 		transform: translateX(0);
 		opacity: 1;
@@ -111,10 +117,6 @@
 }
 
 @keyframes me__description__animation {
-	from {
-		transform: translateX(100%);
-		opacity: 0;
-	}
 	to {
 		transform: translateX(0);
 		opacity: 1;
