@@ -1,0 +1,18 @@
+$content-width: 1110px;
+
+$block-margin-sm: 1rem;
+$block-margin-md: 1.5rem;
+$block-margin: 3rem;
+
+$block-padding-sm: 1rem;
+$block-padding: 2rem;
+
+$responsive-trigger-width: $content-width + 100px;
+
+/* Colors */
+
+$primary: #64ad68;
+$primary-dark: #007a0c;
+$primary-light: #adeab3;
+$primary-lighter-alpha: rgba(210, 255, 210, 0.5);
+$primary-hover: #1bd321;

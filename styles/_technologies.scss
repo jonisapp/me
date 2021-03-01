@@ -1,10 +1,14 @@
 #technologies__items {
 	margin: $block-margin 0 $block-margin 0;
-	padding: $block-margin-mobile;
+	padding: $block-margin-sm;
 	width: 100vw;
 	color: white;
 	font-size: 1rem;
 	font-weight: 400;
+
+	@media (min-width: 400px) {
+		padding: $block-margin-md;
+	}
 
 	@media (min-width: 600px) {
 		column-count: 2;

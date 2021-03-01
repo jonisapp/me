@@ -1,17 +1,4 @@
-$content-width: 1110px;
-$block-margin: 3rem;
-$block-margin-mobile: 1.5rem;
-$block-padding: 2rem;
-$responsive-trigger-width: $content-width + 100px;
-
-/* Colors */
-
-/* old primary: #48a851 */
-$primary: #64ad68;
-$primary-dark: #007a0c;
-$primary-light: #adeab3;
-$primary-lighter-alpha: rgba(210, 255, 210, 0.5);
-$primary-hover: #1bd321;
+@import './constants';
 
 /* mixins */
 
@@ -97,7 +84,11 @@ body {
 
 section {
 	position: relative;
-	margin: 0 $block-margin-mobile 0 $block-margin-mobile;
+	margin: 0 $block-margin-sm 0 $block-margin-sm;
+
+	@media (min-width: 400px) {
+		margin: 0 $block-margin-md 0 $block-margin-md;
+	}
 
 	@media (min-width: $content-width) {
 		margin: 0 auto 0 auto;
@@ -193,10 +184,14 @@ p {
 dl {
 	@include block-margins;
 	@include box-shadow-default;
-	padding: $block-padding;
+	padding: $block-padding-sm;
 	border-radius: 5px;
 	color: white;
 	background-color: $primary;
+
+	@media (min-width: 400px) {
+		padding: $block-padding;
+	}
 
 	dt {
 		font-weight: 400;

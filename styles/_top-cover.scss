@@ -34,7 +34,7 @@
 	margin: auto;
 	width: 800px;
 	height: 50vh;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
 	padding: 0.5rem;
 	font-weight: 300;
@@ -51,11 +51,12 @@
 
 	@media (min-width: 800px) {
 		flex-direction: row;
+		justify-content: space-around;
 	}
 
 	#me__name {
 		display: block;
-		font-size: 2rem;
+		font-size: 1.75rem;
 		transform: translateX(-100%);
 		opacity: 0;
 		animation: me__name__animation 1s ease 0.5s 1 forwards;
@@ -71,7 +72,7 @@
 
 	#me__description {
 		display: block;
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 		transform: translateX(100%);
 		opacity: 0;
 		animation: me__description__animation 1s ease 0.5s 1 forwards;
@@ -86,14 +87,19 @@
 	}
 
 	#profile-picture {
-		height: 150px;
-		width: 150px;
+		height: 115px;
+		width: 115px;
 		margin: 10px;
 		border-radius: 50%;
 		background: url('../images/profile.jpg') center/cover no-repeat border-box;
 		transform: scale(0.5);
 		opacity: 0;
 		animation: me__profile-picture 0.5s ease 0.5s 1 forwards;
+
+		@media (min-width: 400px) {
+			height: 150px;
+			width: 150px;
+		}
 
 		@media (min-width: 800px) {
 			height: 200px;

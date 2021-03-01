@@ -1,5 +1,4 @@
 /* Colors */
-/* old primary: #48a851 */
 /* mixins */
 /* includes */
 .main-header {
@@ -176,8 +175,9 @@
   margin: auto;
   width: 800px;
   height: 50vh;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -206,12 +206,14 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
 .me #me__name {
   display: block;
-  font-size: 2rem;
+  font-size: 1.75rem;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   opacity: 0;
@@ -233,7 +235,7 @@
 
 .me #me__description {
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   opacity: 0;
@@ -254,8 +256,8 @@
 }
 
 .me #profile-picture {
-  height: 150px;
-  width: 150px;
+  height: 115px;
+  width: 115px;
   margin: 10px;
   border-radius: 50%;
   background: url("../images/profile.jpg") center/cover no-repeat border-box;
@@ -264,6 +266,13 @@
   opacity: 0;
   -webkit-animation: me__profile-picture 0.5s ease 0.5s 1 forwards;
           animation: me__profile-picture 0.5s ease 0.5s 1 forwards;
+}
+
+@media (min-width: 400px) {
+  .me #profile-picture {
+    height: 150px;
+    width: 150px;
+  }
 }
 
 @media (min-width: 800px) {
@@ -350,11 +359,17 @@
 
 #technologies__items {
   margin: 3rem 0 3rem 0;
-  padding: 1.5rem;
+  padding: 1rem;
   width: 100vw;
   color: white;
   font-size: 1rem;
   font-weight: 400;
+}
+
+@media (min-width: 400px) {
+  #technologies__items {
+    padding: 1.5rem;
+  }
 }
 
 @media (min-width: 600px) {
@@ -421,7 +436,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2rem;
+  padding: 1rem;
   border: 1px solid #adeab3;
   border-top-width: 0;
   border-radius: 0 0 5px 5px;
@@ -432,6 +447,12 @@
 
 .card .card-body > .card-body__image {
   margin: 2rem 0 0 0;
+}
+
+@media (min-width: 400px) {
+  .card .card-body {
+    padding: 2rem;
+  }
 }
 
 @media (min-width: 1110px) {
@@ -606,7 +627,13 @@ body {
 
 section {
   position: relative;
-  margin: 0 1.5rem 0 1.5rem;
+  margin: 0 1rem 0 1rem;
+}
+
+@media (min-width: 400px) {
+  section {
+    margin: 0 1.5rem 0 1.5rem;
+  }
 }
 
 @media (min-width: 1110px) {
@@ -724,10 +751,16 @@ dl {
   margin: 3rem 0 3rem 0;
   -webkit-box-shadow: 3px 3px 15px 5px rgba(0, 0, 0, 0.1);
           box-shadow: 3px 3px 15px 5px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 5px;
   color: white;
   background-color: #64ad68;
+}
+
+@media (min-width: 400px) {
+  dl {
+    padding: 2rem;
+  }
 }
 
 dl dt {

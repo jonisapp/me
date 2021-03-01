@@ -16,7 +16,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding: $block-padding;
+		padding: $block-padding-sm;
 		border: 1px solid $primary-light;
 		border-top-width: 0;
 		border-radius: 0 0 5px 5px;
@@ -25,6 +25,10 @@
 
 		& > .card-body__image {
 			margin: $block-padding 0 0 0;
+		}
+
+		@media (min-width: 400px) {
+			padding: $block-padding;
 		}
 
 		@media (min-width: $content-width) {
