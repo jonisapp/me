@@ -147,8 +147,9 @@
 }
 
 #cover__front {
-  background: none;
   margin-top: 4rem;
+  margin-bottom: 0;
+  background: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
