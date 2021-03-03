@@ -1,7 +1,12 @@
-#contact_form {
+#contact-form {
 	margin: 0 auto 0 auto;
-	width: $content-width;
+	padding: 0 $block-padding-sm 0 $block-padding-sm;
+	max-width: $content-width;
 	height: calc(100vh - 4rem);
+
+	@media (min-width: $responsive-trigger-width) {
+		padding: 0;
+	}
 
 	#contact_message {
 		width: 100%;
@@ -11,6 +16,30 @@
 		background-color: rgba(255, 255, 255, 0.25);
 	}
 
+	#contact-form__layout {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		#contact-form__user-data {
+			width: 100%;
+
+			@media (min-width: 600px) {
+				display: flex;
+
+				:nth-child(1) {
+					margin-right: 1rem;
+				}
+
+				:nth-child(2) {
+					margin-left: 1rem;
+				}
+			}
+		}
+	}
+
 	input {
 		margin-top: 2rem;
 		padding: 0.5rem;
@@ -18,23 +47,33 @@
 		border: 1px solid $primary-light;
 		outline: none;
 		line-height: 1.5;
-		font-size: 1.5rem;
+		font-size: 1rem;
 		font-family: Roboto;
 		font-weight: 400;
+		color: rgba(0, 0, 0, 0.8);
 		background-color: rgba(255, 255, 255, 0.5);
+
+		@media (min-width: $responsive-trigger-width) {
+			font-size: 1.5rem;
+		}
 	}
 	textarea {
 		margin-top: 2rem;
 		padding: 0.5rem;
-		resize: none;
+		resize: vertical;
 		width: 100%;
 		line-height: 1.5;
-		font-size: 1.5rem;
+		font-size: 1rem;
 		font-family: Roboto;
 		font-weight: 400;
 		border: 1px solid $primary-light;
 		outline: none;
+		color: rgba(0, 0, 0, 0.8);
 		background-color: rgba(255, 255, 255, 0.5);
+
+		@media (min-width: $responsive-trigger-width) {
+			font-size: 1.5rem;
+		}
 	}
 
 	button {

@@ -380,29 +380,20 @@
 				</section>
 				<section class="--expanded --primary-gradient">
 					<form
-						id="contact_form"
+						id="contact-form"
 						action="https://usebasin.com/f/104f7f10e0ab"
 						method="post"
 					>
 						<span id="contact-anchor" class="anchor"></span>
-						<div
-							style="
-								height: 100%;
-								display: flex;
-								flex-direction: column;
-								justify-content: center;
-								align-items: center;
-							"
-						>
+						<div id="contact-form__layout">
 							<div id="contact_message" style="display: none"></div>
-							<div style="display: flex; width: 100%">
+							<div id="contact-form__user-data">
 								<input
 									type="text"
 									id="name"
 									name="name"
 									placeholder="Votre nom"
 									required
-									style="margin-right: 1rem"
 								/>
 								<input
 									type="email"
@@ -410,13 +401,12 @@
 									name="email_address"
 									placeholder="Votre adresse email"
 									required
-									style="margin-left: 1rem"
 								/>
 							</div>
 							<textarea
 								name="text"
 								id="email_text"
-								rows="10"
+								rows="9"
 								placeholder="Vos questions / prise de contact"
 							></textarea>
 							<button type="submit">Envoyer</button>

@@ -1,4 +1,4 @@
-var form = document.getElementById('contact_form');
+var form = document.getElementById('contact-form');
 var formMessage = document.getElementById('contact_message');
 form.addEventListener('submit', function (event) {
 	event.preventDefault();
