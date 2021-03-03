@@ -3,6 +3,14 @@
 	width: $content-width;
 	height: calc(100vh - 4rem);
 
+	#contact_message {
+		width: 100%;
+		text-align: center;
+		color: #bc4747;
+		padding: 0.5rem 1rem 0.5rem 1rem;
+		background-color: rgba(255, 255, 255, 0.25);
+	}
+
 	input {
 		margin-top: 2rem;
 		padding: 0.5rem;
