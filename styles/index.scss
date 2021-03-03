@@ -1,26 +1,5 @@
 @import './constants';
-
-/* mixins */
-
-@mixin block-margins {
-	margin: $block-margin 0 $block-margin 0;
-}
-
-@mixin primary-gradient-lighter {
-	background: #f7fff8;
-	background: radial-gradient(
-		circle,
-		rgba(255, 255, 255, 1) 60%,
-		$primary-lighter-alpha 100%
-	);
-}
-
-@mixin box-shadow-default {
-	box-shadow: 3px 3px 15px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* includes */
-
+@import './mixins';
 @import './header';
 @import './navigation';
 @import './top-cover';
@@ -28,6 +7,7 @@
 @import './background-gradient';
 @import './technologies';
 @import './card';
+@import './contact_form';
 
 * {
 	box-sizing: border-box;
@@ -55,7 +35,6 @@
 html {
 	font-size: 100%;
 	font-family: Roboto;
-	color: rgba(0, 0, 0, 0.8);
 	scroll-behavior: smooth;
 }
 
@@ -63,6 +42,7 @@ body {
 	margin: 0;
 	font-size: 1rem;
 	font-weight: 300;
+	color: rgba(0, 0, 0, 0.8);
 
 	@media (min-width: 800px) {
 		font-size: 1.25rem;
@@ -84,30 +64,30 @@ body {
 
 section {
 	position: relative;
-	margin: 0 $block-margin-sm 0 $block-margin-sm;
+	margin: 4rem $block-margin-sm 4rem $block-margin-sm;
 
 	@media (min-width: 400px) {
 		margin: 0 $block-margin-md 0 $block-margin-md;
 	}
 
 	@media (min-width: $content-width) {
-		margin: 0 auto 0 auto;
+		margin: 4rem auto 4rem auto;
 		width: $content-width;
 	}
 
-	& > span.anchor {
+	.anchor {
 		position: absolute;
 		top: -4rem;
 
 		@media (min-width: 800px) {
-			top: -6rem;
+			top: -4rem;
 		}
 	}
 }
 
 footer {
 	padding: 2 * $block-padding 0 2 * $block-padding 0;
-	border-top: 1px solid $primary-light;
+	// border-top: 1px solid $primary-light;
 	@include primary-gradient-lighter;
 	font-weight: 400;
 	color: rgba(0, 0, 0, 0.7);
@@ -156,7 +136,8 @@ ul {
 }
 
 h1 {
-	margin: 5rem 0 $block-margin 0;
+	margin: 4rem 0 $block-margin 0;
+	padding-top: 1rem;
 	font-weight: 200;
 	font-size: 2rem;
 

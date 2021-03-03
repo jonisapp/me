@@ -378,12 +378,55 @@
 						la diversité d'opinions.
 					</p>
 				</section>
+				<section class="--expanded --primary-gradient">
+					<form
+						id="contact_form"
+						action="https://usebasin.com/f/104f7f10e0ab"
+						method="post"
+					>
+						<span id="contact-anchor" class="anchor"></span>
+						<div
+							style="
+								height: 100%;
+								display: flex;
+								flex-direction: column;
+								justify-content: center;
+								align-items: center;
+							"
+						>
+							<div style="display: flex; width: 100%">
+								<input
+									type="text"
+									id="name"
+									name="name"
+									placeholder="Votre nom"
+									required
+									style="margin-right: 1rem"
+								/>
+								<input
+									type="email"
+									id="email"
+									name="email_address"
+									placeholder="Votre adresse email"
+									required
+									style="margin-left: 1rem"
+								/>
+							</div>
+							<textarea
+								name="text"
+								id="email_text"
+								rows="10"
+								placeholder="Vos questions / prise de contact"
+							></textarea>
+							<button type="submit">Envoyer</button>
+						</div>
+					</form>
+				</section>
 			</main>
 			<footer class="--expanded">
-				<span id="contact-anchor" class="anchor"></span>
-				<section>
+				<section style="margin: 0 auto 0 auto">
 					<div id="footer__content">
-						<div>zappala.jonathan@gmail.com</div>
+						<div>admin@innovation-it.ch</div>
 						<div>+41 79 963 81 35</div>
 						<div id="networks-links">
 							<a href="https://www.linkedin.com/in/jonathan-zappala-575a8b14b/">
@@ -419,5 +462,6 @@
 		<script>
 			AOS.init();
 		</script>
+		<script src="./js/emailValidation.js"></script>
 	</body>
 </html>

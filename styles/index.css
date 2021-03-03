@@ -1,6 +1,4 @@
 /* Colors */
-/* mixins */
-/* includes */
 .main-header {
   top: 0;
   position: fixed;
@@ -530,6 +528,49 @@
           filter: blur(0px);
 }
 
+#contact_form {
+  margin: 0 auto 0 auto;
+  width: 1110px;
+  height: calc(100vh - 4rem);
+}
+
+#contact_form input {
+  margin-top: 2rem;
+  padding: 0.5rem;
+  width: 100%;
+  border: 1px solid #adeab3;
+  outline: none;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  font-family: Roboto;
+  font-weight: 400;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#contact_form textarea {
+  margin-top: 2rem;
+  padding: 0.5rem;
+  resize: none;
+  width: 100%;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  font-family: Roboto;
+  font-weight: 400;
+  border: 1px solid #adeab3;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#contact_form button {
+  margin-top: 2rem;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  font-size: 1rem;
+  font-family: Roboto;
+  color: #007a0c;
+  background-color: white;
+  border: 1px solid #007a0c;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -576,7 +617,6 @@
 html {
   font-size: 100%;
   font-family: Roboto;
-  color: rgba(0, 0, 0, 0.8);
   scroll-behavior: smooth;
 }
 
@@ -584,6 +624,7 @@ body {
   margin: 0;
   font-size: 1rem;
   font-weight: 300;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 @media (min-width: 800px) {
@@ -627,7 +668,7 @@ body {
 
 section {
   position: relative;
-  margin: 0 1rem 0 1rem;
+  margin: 4rem 1rem 4rem 1rem;
 }
 
 @media (min-width: 400px) {
@@ -638,25 +679,24 @@ section {
 
 @media (min-width: 1110px) {
   section {
-    margin: 0 auto 0 auto;
+    margin: 4rem auto 4rem auto;
     width: 1110px;
   }
 }
 
-section > span.anchor {
+section .anchor {
   position: absolute;
   top: -4rem;
 }
 
 @media (min-width: 800px) {
-  section > span.anchor {
-    top: -6rem;
+  section .anchor {
+    top: -4rem;
   }
 }
 
 footer {
   padding: 4rem 0 4rem 0;
-  border-top: 1px solid #adeab3;
   background: #f7fff8;
   background: radial-gradient(circle, white 60%, rgba(210, 255, 210, 0.5) 100%);
   font-weight: 400;
@@ -718,7 +758,8 @@ ul {
 }
 
 h1 {
-  margin: 5rem 0 3rem 0;
+  margin: 4rem 0 3rem 0;
+  padding-top: 1rem;
   font-weight: 200;
   font-size: 2rem;
 }
