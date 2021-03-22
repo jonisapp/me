@@ -530,6 +530,7 @@
 }
 
 #contact-form {
+  scroll-snap-align: center;
   margin: 0 auto 0 auto;
   padding: 0 1rem 0 1rem;
   max-width: 1110px;
@@ -686,6 +687,10 @@ html {
 }
 
 body {
+  height: 100vh;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  overflow-y: scroll;
   margin: 0;
   font-size: 1rem;
   font-weight: 300;
